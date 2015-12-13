@@ -6,6 +6,7 @@ sudo apt-get install git
 git clone https://github.com/ftan84/.environment_settings.git
 cd .environment_settings
 
+sleep 5
 ls -al
 cd ~
 ```
