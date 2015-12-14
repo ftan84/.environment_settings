@@ -41,6 +41,4 @@ sudo pip install virtualenvwrapper
 Additional package installation
 ```
 sudo apt-get install tree
-y
-cd ~
 ```
