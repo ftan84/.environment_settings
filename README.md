@@ -14,4 +14,5 @@ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 cp toothed.zsh-theme ~/.oh-my-zsh/themes/
 rm ~/.zshrc
 ln -s .zshrc ~/.zshrc
+ln -s .emacs ~/.emacs
 ```
