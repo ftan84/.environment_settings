@@ -31,6 +31,13 @@ cd ~
 rm -r emacs-24.5 emacs-24.5.tar.gz
 ln -s .environment_settings/.emacs ~/.emacs
 ```
+Install Python stuff
+```
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+rm get-pip.py
+sudo pip install virtualenvwrapper
+```
 Additional package installation
 ```
 sudo apt-get install tree
