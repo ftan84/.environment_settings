@@ -11,9 +11,9 @@ Log out and log back in. From here we clone the settings from the repo, install 
 ```
 git clone git@github.com:ftan84/.environment_settings.git
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-cp toothed.zsh-theme ~/.oh-my-zsh/themes/
+ln -s ~/.environment_settings/toothed.zsh-theme ~/.oh-my-zsh/themes/toothed.zsh-theme
 rm ~/.zshrc
-ln -s .environment_settings/.zshrc ~/.zshrc
+ln -s ~/.environment_settings/.zshrc ~/.zshrc
 ```
 Next we need to download and build Emacs 24.5 and create symlink for .emacs file.
 ```
@@ -29,7 +29,7 @@ make
 sudo make install
 cd ~
 rm -r emacs-24.5 emacs-24.5.tar.gz
-ln -s .environment_settings/.emacs ~/.emacs
+ln -s ~/.environment_settings/.emacs ~/.emacs
 ```
 Install Python stuff
 ```
