@@ -14,5 +14,11 @@ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 cp toothed.zsh-theme ~/.oh-my-zsh/themes/
 rm ~/.zshrc
 ln -s .zshrc ~/.zshrc
+cd ~
+sudo apt-get install build-essential
+sudo apt-get build-dep emacs24
+wget http://ftp.gnu.org/gnu/emacs/emacs-24.5.tar.gz
+
+cd .environment_settings
 ln -s .emacs ~/.emacs
 ```
