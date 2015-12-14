@@ -31,3 +31,9 @@ cd ~
 rm -r emacs-24.5 emacs-24.5.tar.gz
 ln -s .environment_settings/.emacs ~/.emacs
 ```
+Additional package installation
+```
+sudo apt-get install tree
+y
+cd ~
+```
