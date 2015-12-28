@@ -74,12 +74,15 @@ Return a list of installed packages or nil for every skipped package."
 (display-time-mode t)
 ;; Show the batter percentage
 (display-battery-mode t)
-;; (add-to-list 'default-frame-alist '(font . "Inconsolata-g for Powerline"))
 ;; Manage backup and autosave files
 (setq backup-directory-alist
       `((".*" . "~/.emacs.d/backupfiles")))
 (setq auto-save-file-name-transforms
             `((".*" "~/.emacs.d/backupfiles" t)))
+(toggle-frame-fullscreen)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(add-to-list 'default-frame-alist '(font . "Inconsolata-g-11"))
 ;; ;; Add a color column at column 80
 ;; (add-hook 'python-mode-hook (lambda ()
 ;; 			      (turn-on-auto-fill)
