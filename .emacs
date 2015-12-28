@@ -84,10 +84,10 @@ Return a list of installed packages or nil for every skipped package."
 (scroll-bar-mode -1)
 (add-to-list 'default-frame-alist '(font . "Inconsolata-g-11"))
 ;; ;; Add a color column at column 80
-;; (add-hook 'python-mode-hook (lambda ()
-;; 			      (turn-on-auto-fill)
-;; 			      (fci-mode)
-;;   			      (set-fill-column 80)))
+(add-hook 'python-mode-hook (lambda ()
+			      (turn-on-auto-fill)
+			      (fci-mode)
+  			      (set-fill-column 80)))
 
 
 ;; ========================
