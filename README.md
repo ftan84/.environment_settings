@@ -11,6 +11,7 @@ cd ~
 ## Installation (LTS 14.04)
 First we need to install git and zsh. Then change the default shell to zsh. Make sure to run these commands in home directory ~
 ```
+cd ~
 sudo apt-get install -y git zsh tree
 ```
 Log out and log back in. From here we clone the settings from the repo, install oh-my-zsh, and create symlink for .zshrc.
