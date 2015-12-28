@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/bin/bash
 
 sudo apt-get -y install git zsh
 sudo chsh -s $(which zsh)
