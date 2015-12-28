@@ -57,7 +57,7 @@ Return a list of installed packages or nil for every skipped package."
 ;; Don't create backup files
 ;; (setq make-backup-files nil)
 ;; Supress welcome screen
-;; (setq inhibit-startup-message t)
+(setq inhibit-startup-message t)
 ;; Line number on and add bar
 (global-linum-mode t)
 ;;(setq linum-format "%4d \u2502 ")
