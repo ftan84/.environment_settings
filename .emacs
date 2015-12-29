@@ -79,16 +79,20 @@ Return a list of installed packages or nil for every skipped package."
       `((".*" . "~/.emacs.d/backupfiles")))
 (setq auto-save-file-name-transforms
             `((".*" "~/.emacs.d/backupfiles" t)))
+;; Gui Emacs defaults
 (toggle-frame-fullscreen)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (add-to-list 'default-frame-alist '(font . "Inconsolata-g-11"))
-;; ;; Add a color column at column 80
-(add-hook 'python-mode-hook (lambda ()
-			      (turn-on-auto-fill)
-			      (fci-mode)
-  			      (set-fill-column 80)))
+;; Set the default split window direction
+(setq split-height-threshold nil)
+(setq split-width-threshold 0)
 
+;; Add a color column at column 80
+;; (add-hook 'python-mode-hook (lambda ()
+;; 			      (turn-on-auto-fill)
+;; 			      (fci-mode)
+;;   			      (set-fill-column 80)))
 
 ;; ========================
 ;; Custom keyboard bindings
@@ -121,6 +125,7 @@ Return a list of installed packages or nil for every skipped package."
 (evil-leader/set-key "q" 'kill-buffer-and-window)
 (evil-leader/set-key "nt" 'neotree-toggle)
 (evil-leader/set-key "cc" 'comment-or-uncomment-region)
+(evil-leader/set-key "!" 'elpy-shell-switch-to-shell)
 (evil-leader/set-key "git" 'magit-status)
 
 ;; Neotree settings
@@ -147,6 +152,11 @@ Return a list of installed packages or nil for every skipped package."
 (diminish 'undo-tree-mode)
 (diminish 'elpy-mode)
 
+;; Fill Column Indicator
+;; (require 'fill-column-indicator)
+;; (fci-mode)
+
+
 ;; ================
 ;; Custom variables
 ;; ================
@@ -171,9 +181,9 @@ Return a list of installed packages or nil for every skipped package."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(company-tooltip ((t (:background "blue"))))
- '(company-tooltip-annotation ((t (:background "blue" :foreground "#afaf00"))))
+ '(company-tooltip ((t (:background "steel blue"))))
+ '(company-tooltip-annotation ((t (:background "steel blue" :foreground "dark green" :weight bold))))
  '(company-tooltip-common ((t (:background "blue" :foreground "brightwhite" :underline t))))
  '(company-tooltip-common-selection ((t (:background "brightwhite" :foreground "red" :underline t))))
- '(company-tooltip-selection ((t (:background "brightwhite" :foreground "red")))))
+ '(company-tooltip-selection ((t (:background "wheat" :foreground "dark green")))))
 
