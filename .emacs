@@ -61,7 +61,7 @@ Return a list of installed packages or nil for every skipped package."
 ;; Line number on and add bar
 (global-linum-mode t)
 ;;(setq linum-format "%4d \u2502 ")
-(setq linum-format "%4d\u2502 ")
+(setq linum-format "%4d\u2502")
 ; Don't show menu bar
 (menu-bar-mode 0)
 ;; Gruvbox theme
@@ -83,7 +83,7 @@ Return a list of installed packages or nil for every skipped package."
 (toggle-frame-fullscreen)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(add-to-list 'default-frame-alist '(font . "Inconsolata-g-11"))
+(add-to-list 'default-frame-alist '(font . "Inconsolata"))
 ;; Set the default split window direction
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
