@@ -34,6 +34,8 @@ Return a list of installed packages or nil for every skipped package."
 			  'elpy
 			  'helm
                           'diminish
+                          'lorem-ipsum
+                          ;; 'company-quickhelp
                           'neotree)
                           ;; 'slime
                           ;; 'evil-tabs
@@ -83,7 +85,7 @@ Return a list of installed packages or nil for every skipped package."
 (toggle-frame-fullscreen)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(add-to-list 'default-frame-alist '(font . "Inconsolata-g-11"))
+(add-to-list 'default-frame-alist '(font . "Inconsolata"))
 ;; Set the default split window direction
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
@@ -129,6 +131,7 @@ Return a list of installed packages or nil for every skipped package."
 (evil-leader/set-key "git" 'magit-status)
 
 ;; Neotree settings
+(defvar neo-theme 'nerd)
 (add-hook 'neotree-mode-hook
 	  (lambda ()
 	    (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
@@ -156,7 +159,16 @@ Return a list of installed packages or nil for every skipped package."
 ;; (require 'fill-column-indicator)
 ;; (fci-mode)
 
-
+;; Different default color for company completion
+(require 'color)
+  
+  (let ((bg (face-attribute 'default :background)))
+    (custom-set-faces
+     `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
+     `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
+     `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
+     `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+     `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
 ;; ================
 ;; Custom variables
 ;; ================
@@ -176,14 +188,26 @@ Return a list of installed packages or nil for every skipped package."
  '(elpy-test-nose-runner-command (quote ("nosetests" "--nocapture")))
  '(elpy-test-runner (quote elpy-test-nose-runner))
  '(python-shell-interpreter "ipython"))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(company-tooltip ((t (:background "steel blue"))))
+;;  '(company-tooltip-annotation ((t (:background "steel blue" :foreground "dark green" :weight bold))))
+;;  '(company-tooltip-common ((t (:background "blue" :foreground "brightwhite" :underline t))))
+;;  '(company-tooltip-common-selection ((t (:background "brightwhite" :foreground "red" :underline t))))
+;;  '(company-tooltip-selection ((t (:background "wheat" :foreground "dark green"))))
+;;  '(flymake-errline ((t (:foreground "red")))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(company-tooltip ((t (:background "steel blue"))))
- '(company-tooltip-annotation ((t (:background "steel blue" :foreground "dark green" :weight bold))))
- '(company-tooltip-common ((t (:background "blue" :foreground "brightwhite" :underline t))))
- '(company-tooltip-common-selection ((t (:background "brightwhite" :foreground "red" :underline t))))
- '(company-tooltip-selection ((t (:background "wheat" :foreground "dark green")))))
-
+ '(company-scrollbar-bg ((t (:background "#414141"))))
+ '(company-scrollbar-fg ((t (:background "#343434"))))
+ '(company-tooltip ((t (:inherit default :background "#2d2d2d"))))
+ '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
+ '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+ '(flymake-errline ((t (:underline t)))))
