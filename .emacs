@@ -63,7 +63,7 @@ Return a list of installed packages or nil for every skipped package."
 ;; Line number on and add bar
 (global-linum-mode t)
 ;;(setq linum-format "%4d \u2502 ")
-(setq linum-format "%4d\u2502 ")
+(setq linum-format "%4d\u2502")
 ; Don't show menu bar
 (menu-bar-mode 0)
 ;; Gruvbox theme
