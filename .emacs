@@ -35,6 +35,8 @@ Return a list of installed packages or nil for every skipped package."
 			  'helm
                           'diminish
                           'lorem-ipsum
+                          'multi-term
+                          'color
                           ;; 'company-quickhelp
                           'neotree)
                           ;; 'slime
@@ -155,20 +157,24 @@ Return a list of installed packages or nil for every skipped package."
 (diminish 'undo-tree-mode)
 (diminish 'elpy-mode)
 
+;; Multi-term
+(require 'multi-term)
+(setq multi-term-program "/usr/bin/zsh")
+
 ;; Fill Column Indicator
 ;; (require 'fill-column-indicator)
 ;; (fci-mode)
 
 ;; Different default color for company completion
-(require 'color)
+;; (require 'color)
   
-  (let ((bg (face-attribute 'default :background)))
-    (custom-set-faces
-     `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
-     `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
-     `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
-     `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
-     `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
+  ;; (let ((bg (face-attribute 'default :background)))
+  ;;   (custom-set-faces
+  ;;    `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
+  ;;    `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
+  ;;    `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
+  ;;    `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+  ;;    `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
 ;; ================
 ;; Custom variables
 ;; ================
@@ -205,9 +211,17 @@ Return a list of installed packages or nil for every skipped package."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(company-scrollbar-bg ((t (:background "#414141"))))
- '(company-scrollbar-fg ((t (:background "#343434"))))
- '(company-tooltip ((t (:inherit default :background "#2d2d2d"))))
- '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
- '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+
+ ;; Default company colors
+ ;; '(company-scrollbar-bg ((t (:background "#414141"))))
+ ;; '(company-scrollbar-fg ((t (:background "#343434"))))
+ ;; '(company-tooltip ((t (:inherit default :background "#2d2d2d"))))
+ ;; '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
+ ;; '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+    ;; '(company-tooltip ((t (:inherit default :background (color-lighten-name bg 2)))))
+    ;; '(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
+    ;; '(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
+    ;; '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+    ;; '(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
+
  '(flymake-errline ((t (:underline t)))))

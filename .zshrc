@@ -93,3 +93,5 @@ export TERM="xterm-256color"
 # Sets system time to Pacific
 export TZ="/usr/share/zoneinfo/America/Los_Angeles"
 
+# Alias for multitail
+alias tail="multitail -cS python-log"
