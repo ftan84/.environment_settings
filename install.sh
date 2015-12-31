@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get -y install zsh emacs24 tree
+sudo apt-get -y install zsh emacs24 tree multitail
 rm ~/.zshrc
 ln -s ~/.environment_settings/.zshrc ~/.zshrc
 ln -s ~/.environment_settings/.emacs ~/.emacs
