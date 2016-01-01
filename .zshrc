@@ -94,4 +94,4 @@ export TERM="xterm-256color"
 export TZ="/usr/share/zoneinfo/America/Los_Angeles"
 
 # Alias for multitail
-alias tail="multitail -cS python-log"
+alias multitail="multitail -cS python-log"
