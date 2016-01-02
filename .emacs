@@ -88,9 +88,9 @@ Return a list of installed packages or nil for every skipped package."
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (add-to-list 'default-frame-alist '(font . "Inconsolata"))
-;; Set the default split window direction
-(setq split-height-threshold nil)
-(setq split-width-threshold 0)
+;; ;; Set the default split window direction
+;; (setq split-height-threshold nil)
+;; (setq split-width-threshold 0)
 
 ;; Add a color column at column 80
 ;; (add-hook 'python-mode-hook (lambda ()
