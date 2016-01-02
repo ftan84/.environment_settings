@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get -y install zsh emacs24 tree multitail
+sudo apt-get -y install zsh emacs24 tree multitail git-flow
 rm ~/.zshrc
 ln -s ~/.environment_settings/.zshrc ~/.zshrc
 ln -s ~/.environment_settings/.emacs ~/.emacs

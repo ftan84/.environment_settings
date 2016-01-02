@@ -95,3 +95,7 @@ export TZ="/usr/share/zoneinfo/America/Los_Angeles"
 
 # Alias for multitail
 alias multitail="multitail -cS python-log"
+
+
+# Alias for emacs
+alias emacs="emacs -nw"
