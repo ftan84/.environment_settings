@@ -36,7 +36,7 @@ Return a list of installed packages or nil for every skipped package."
                           'diminish
                           'lorem-ipsum
                           'multi-term
-                          'color
+                          'xclip
                           ;; 'company-quickhelp
                           'neotree)
                           ;; 'slime
@@ -161,6 +161,10 @@ Return a list of installed packages or nil for every skipped package."
 (require 'multi-term)
 (setq multi-term-program "/usr/bin/zsh")
 
+;; Xclip mode
+;; (require 'xclip)
+(xclip-mode 1)
+
 ;; Fill Column Indicator
 ;; (require 'fill-column-indicator)
 ;; (fci-mode)
@@ -211,17 +215,4 @@ Return a list of installed packages or nil for every skipped package."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-
- ;; Default company colors
- ;; '(company-scrollbar-bg ((t (:background "#414141"))))
- ;; '(company-scrollbar-fg ((t (:background "#343434"))))
- ;; '(company-tooltip ((t (:inherit default :background "#2d2d2d"))))
- ;; '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
- ;; '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
-    ;; '(company-tooltip ((t (:inherit default :background (color-lighten-name bg 2)))))
-    ;; '(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
-    ;; '(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
-    ;; '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
-    ;; '(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
-
- '(flymake-errline ((t (:underline t)))))
+ '(flymake-errline ((t (:foreground "red" :weight bold)))))
