@@ -87,7 +87,7 @@ Return a list of installed packages or nil for every skipped package."
 (toggle-frame-fullscreen)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(add-to-list 'default-frame-alist '(font . "Inconsolata"))
+(add-to-list 'default-frame-alist '(font . "Inconsolata for Powerline-12"))
 ;; Highlight current line
 (global-hl-line-mode t)
 ;; ;; Set the default split window direction
@@ -135,7 +135,7 @@ Return a list of installed packages or nil for every skipped package."
 (evil-leader/set-key "git" 'magit-status)
 
 ;; Neotree settings
-(defvar neo-theme 'nerd)
+(defvar neo-theme 'ascii)
 (add-hook 'neotree-mode-hook
 	  (lambda ()
 	    (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
