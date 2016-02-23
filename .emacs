@@ -190,6 +190,7 @@ Return a list of installed packages or nil for every skipped package."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(airline-display-directory nil)
+ '(airline-utf-glyph-branch 57504)
  '(airline-utf-glyph-linenumber 57505)
  '(airline-utf-glyph-subseparator-right 57523)
  '(battery-mode-line-format " [%t remaining]")
