@@ -16,7 +16,7 @@ set nocompatible
 
 " Setup for vundle
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.environment_settings/vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Initialize the vundle plugin
