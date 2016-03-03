@@ -76,6 +76,8 @@ syntax on
 set hlsearch
 
 " Sets line numbers to on
+" Using both relative and absolute line numbers
+set relativenumber
 set number
 
 " Set ruler
@@ -133,14 +135,20 @@ set noswapfile
 set mouse=a
 
 " Settings for the modules
-source ~/.vim/module_settings
+source ~/.environment_settings/vim/module_settings
 
 " Printing options
 set popt=number:y
 
-" Color column at 79
+" Color column at 80
 set colorcolumn=80
 highlight ColorColumn ctermbg=0
+
+" Highlight current line
+set cursorline
+
+" Change the highlight color
+:hi Visual guibg=Gray30 gui=None
 
 " =============================
 " Custom mappings

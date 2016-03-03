@@ -30,7 +30,7 @@ let g:airline_symbols.space = "\ua0"
 " This replaces section y from encoding to date and time
 " let g:airline_section_y = '%{strftime("%b %d,%Y %H:%m%p")}' 
 
-let g:airline_theme = 'molokai'
+let g:airline_theme = 'dark'
 
 " ========================
 " Vim slime settings
