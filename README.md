@@ -1,4 +1,6 @@
 # .environment_settings
+THIS REPO IS NO LONGER SUPPORTED. Please use my new [dotfiles](https://github.com/ftan84/dotfiles) repo.
+
 Settings for my development environment which includes oh my zsh and emacs
 
 ## Installation
